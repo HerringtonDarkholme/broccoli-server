@@ -6,6 +6,7 @@ COPY . /app
 # Install server dependencies
 WORKDIR /app/server
 RUN pipenv install --deploy --system
+RUN pip install pip==18.1
 
 # Install web dependencies
 WORKDIR /app/web
