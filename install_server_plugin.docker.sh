@@ -5,4 +5,6 @@ echo "Checking required environment"
 [ -z "$SERVER_PLUGIN" ] && echo "Need to set \$SERVER_PLUGIN" && exit 1;
 
 echo "Installing $SERVER_PLUGIN"
-pip install $SERVER_PLUGIN --process-dependency-links
+pip install --user pip==18.1
+pip --version
+pip install --user $SERVER_PLUGIN --process-dependency-links
